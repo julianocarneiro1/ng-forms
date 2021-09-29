@@ -24,6 +24,10 @@ export class UserSettingsFormComponent implements OnInit {
   startDate: Date
   startTime: Date
 
+  userRating: 0  
+  maxRating: 10
+  isReadonly = false
+
   userSettings: UserSettings = { ...this.originalUserSettings } //spread operator (copying data)
 
   postError = false
