@@ -21,6 +21,8 @@ export class UserSettingsFormComponent implements OnInit {
 
   singleModel = "On"
 
+  startDate: Date
+
   userSettings: UserSettings = { ...this.originalUserSettings } //spread operator (copying data)
 
   postError = false
@@ -31,6 +33,7 @@ export class UserSettingsFormComponent implements OnInit {
 
   ngOnInit() {
     this.subscriptionTypes = this.dataService.getSubscriptionTypes()
+    this.startDate = new Date()
   }
 
   onBlur(field: NgModel) {
